@@ -1,0 +1,15 @@
+{
+  "bindings": [
+    {
+      "type": "cosmosDBTrigger",
+      "name": "documents",
+      "direction": "in",
+      "leaseCollectionName": "leases",
+      "connectionStringSetting": "event-sourcing-poc_DOCUMENTDB",
+      "databaseName": "example",
+      "collectionName": "events",
+      "createLeaseCollectionIfNotExists": "true"
+    }
+  ],
+  "scriptFile": "../dist/user-projection/index.js"
+}
